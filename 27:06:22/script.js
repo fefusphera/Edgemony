@@ -13,6 +13,33 @@
 
 //-----------------------------
 
+const newEl = (el) => document.createElement(el);
+
+const navEl = newEl("nav");
+const titleEl = newEl("h3");
+
+const person = prompt("Ciao! Inserisci il tuo nome utente");
+
+const body = document.querySelector("body");
+body.append(navEl);
+navEl.append(titleEl);
+
+titleEl.innerText = "ciao" + " " + person;
+
+localStorage.setItem("username", person);
+
+try {
+  if (username.lenght === 0) {
+  }
+} catch (error) {
+  console.error("Non hai inserito il Nome!");
+}
+
+// } else {
+
+//   throw new Error('suca')
+// }
+
 // const nomeEl = newEl("h3");
 // // nomeEl.className = "username1";
 // // nomeEl.textContent = "nome";
@@ -67,15 +94,15 @@
 // const newEl = (el) => document.createElement(el);
 // const provaEl = newEl("h3");
 
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
-window.onload = function () {
-  const nome = prompt("What is your name?");
-  const prova = document.querySelector("h3");
-  prova.innerHTML = `Ciao ${nome}`;
-};
+// window.onload = function () {
+//   const nome = prompt("What is your name?");
+//   const prova = document.querySelector("h3");
+//   prova.innerHTML = `Ciao ${nome}`;
+// };
 
-// prova.className = "nome1";
+// // prova.className = "nome1";
 
-prova.append();
-parent.appendChild(prova);
+// prova.append();
+// parent.appendChild(prova);
