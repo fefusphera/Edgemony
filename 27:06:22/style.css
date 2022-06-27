@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* .nome1 {
+  background-color: aquamarine;
+  color: blue;
+} */

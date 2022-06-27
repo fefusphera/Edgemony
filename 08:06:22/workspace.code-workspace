@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../../cb4-lezioni-main/08-06-2022"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Lezione 08:06:22"
+  }
+}
