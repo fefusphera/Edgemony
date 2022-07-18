@@ -30,7 +30,7 @@ GET("https://edgemony-backend.herokuapp.com/messages").then((messagesList) => {
   messagesList
     .reverse()
     .map(({ text, sender, date }) =>
-      createMessageEl(messagesListEl, text, sender, date)
+      createMessageEl(messagesListEl, id, text, sender, date)
     ); // Questo è identico a quello che succede in riga 11
 });
 
@@ -57,7 +57,7 @@ addMsgBtn.addEventListener("click", () => {
           messagesList
             .reverse()
             .map(({ text, sender, date }) =>
-              createMessageEl(messagesListEl, text, sender, date)
+              createMessageEl(messagesListEl, id, text, sender, date)
             );
         }
       )
@@ -77,18 +77,28 @@ filterInput.addEventListener("input", (e) => {
           message.sender.toLowerCase().includes(e.target.value.toLowerCase())
         )
         .map(({ text, sender, date }) =>
-          createMessageEl(messagesListEl, text, sender, date)
+          createMessageEl(messagesListEl, id, text, sender, date)
         ); // Questo è identico a quello che succede in riga 11
     }
   );
 });
 
-messageCard.addEventListener("click", (e) => {
-  DOCUMENT.DELETE(BASE_URL).then(() => location.reload());
-});
+// messagesList.addEventListener("click", (e) => {
+//   DOCUMENT.DELETE(BASE_URL).then(() => location.reload());
+// });
 
 // deleteInputEl.addEventListener("input", (eventInput) => {
 //     removeSerieBtnEl.addEventListener("click", (eventClick) => {
 //       DELETE(BASE_URL, eventInput.target.value).then(() => location.reload());
 //     });
 //   });
+
+// fetch(BASE_URL, {
+//   method: "DELETE",
+//   headers: {
+//     messageList: "application/json",
+//   },
+//   body: JSON.stringify(YOUR_ADDITIONAL_DATA), //if you do not want to send any addional data,  replace the complete JSON.stringify(YOUR_ADDITIONAL_DATA) with null
+// });
+
+// messageCard.onclick = async function removeItem(messageCard.id)
