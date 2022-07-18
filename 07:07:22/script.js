@@ -26,7 +26,7 @@ function addListBtn(event) {
   //   console.log(inputEl.value); so che funziona okay
   // inputEl.value chiamato newTask, va dentro li
 
-  event.preventDefault(); //dato per fede
+  event.preventDefault(); //dato per fede~
 
   const newTaskHTML = inputEl.value;
 
