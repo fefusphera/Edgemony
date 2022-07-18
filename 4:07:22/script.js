@@ -51,7 +51,7 @@ let shop = {
   },
 };
 
-shop.shopItem1 = "1 TV 40";
+shop.shopItem1 = "1 TV suca40";
 shop.shopItem2 = "2 PC 30";
 
 console.log(shop);
