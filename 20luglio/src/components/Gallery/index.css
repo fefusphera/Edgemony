@@ -1,0 +1,16 @@
+.MainGallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  flex-direction: row; */
+  /* justify-content: space-around; */
+  /* margin-right: 10px; */
+}
+
+.MainGallery img {
+  
+  margin: 1rem;
+  border-radius: 5px;
+}
