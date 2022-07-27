@@ -1,28 +1,35 @@
-import { useState, useEffect } from 'react'; 
-import FriendCard from '../FriendCard';
-import { GET } from '../../utils/api';
-import './index.css';
+import { useState, useEffect } from "react";
+import FriendCard from "../FriendCard";
+import { GET } from "../../utils/api";
+import "./index.css";
 
-const FriendCardList = ({setFilteredValue}) => {
+const FriendCardList = ({ isRenderedFriendList, setFilteredValue }) => {
   const [friendList, setFriendList] = useState([]);
 
   useEffect(() => {
-    GET('friends').then(data => setFriendList(data));
-  }, []);
+    GET("friends").then((data) => setFriendList(data));
+  }, [isRenderedFriendList]);
 
   const obj = {
-    name: 'pippo', photo: 'https://randomuser.me/api/portraits/lego/5.jpg'
-  }
+    name: "pippo",
+    photo: "https://randomuser.me/api/portraits/lego/5.jpg",
+  };
 
   return (
     <div className="FriendCardList">
-      {
-        friendList.length
-          ? friendList.map(friend => <FriendCard setFilteredValue={setFilteredValue} key={friend.id} friendData={friend}/>)
-          : <p>Loading...</p>
-      }
+      {friendList.length ? (
+        friendList.map((friend) => (
+          <FriendCard
+            setFilteredValue={setFilteredValue}
+            key={friend.id}
+            friendData={friend}
+          />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default FriendCardList;
