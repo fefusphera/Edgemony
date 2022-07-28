@@ -3,12 +3,13 @@ import FriendCard from "../FriendCard";
 import { GET } from "../../utils/api";
 import "./index.css";
 
-const FriendCardList = ({ isRenderedFriendList, setFilteredValue }) => {
+const FriendCardList = () => {
   const [friendList, setFriendList] = useState([]);
+  const [isRenderedList, setRenderedList] = useState(false);
 
   useEffect(() => {
     GET("friends").then((data) => setFriendList(data));
-  }, [isRenderedFriendList]);
+  }, [isRenderedList]);
 
   const obj = {
     name: "pippo",
@@ -20,9 +21,9 @@ const FriendCardList = ({ isRenderedFriendList, setFilteredValue }) => {
       {friendList.length ? (
         friendList.map((friend) => (
           <FriendCard
-            setFilteredValue={setFilteredValue}
-            key={friend.id}
+            setRenderedList={setRenderedList}
             friendData={friend}
+            key={friend.id}
           />
         ))
       ) : (

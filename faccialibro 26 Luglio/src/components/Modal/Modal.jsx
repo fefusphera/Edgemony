@@ -1,7 +1,13 @@
 import Button from "../Button";
 import "./index.css";
 
-const Modal = ({ mainModalText, onCancelBtnClick, onOkBtnClick }) => {
+const Modal = ({
+  mainModalText,
+  onCancelBtnClick,
+  onOkBtnClick,
+  okBtnText,
+  cancelBtnText,
+}) => {
   return (
     <div className="Modal__overlay">
       <div className="Modal">
@@ -9,13 +15,13 @@ const Modal = ({ mainModalText, onCancelBtnClick, onOkBtnClick }) => {
         <Button
           color="grey"
           onBtnClick={() => onCancelBtnClick(false)}
-          textContent="cancel"
+          textContent={cancelBtnText}
           className="Modal__btn_cancel"
         />
         <Button
           color="green"
           onBtnClick={onOkBtnClick}
-          textContent="ok"
+          textContent={okBtnText}
           className="Modal__btn_ok"
         />
       </div>

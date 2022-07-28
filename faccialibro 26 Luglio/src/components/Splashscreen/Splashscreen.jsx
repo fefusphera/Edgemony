@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Modal from "../Modal";
 import Button from "../Button";
 import "./index.css";
 

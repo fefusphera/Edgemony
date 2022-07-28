@@ -4,7 +4,7 @@ import Button from "../Button";
 
 import "./index.css";
 
-const AddFriend = ({ isRenderedFriendList, setRenderedFriendList }) => {
+const AddFriend = ({ isRenderedList, setRenderedList }) => {
   const [newFriendname, setNewFriendname] = useState("");
   const [newFriendImg, setNewFriendImg] = useState("");
 
@@ -18,7 +18,7 @@ const AddFriend = ({ isRenderedFriendList, setRenderedFriendList }) => {
       }).then(() => {
         setNewFriendname("");
         setNewFriendImg("");
-        setRenderedFriendList(!isRenderedFriendList);
+        setRenderedList(!isRenderedList);
       });
     }
   };
