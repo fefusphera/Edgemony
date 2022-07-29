@@ -11,7 +11,7 @@ const FriendCard = ({ friendData, setRenderedList }) => {
     <div className="FriendCard">
       <img className="FriendCard__photo" src={photo} alt={name} />
       <p className="FriendCard__name">{name}</p>
-      <button onClick={() => onHandleDelete(id)} className="FriendCard__btn">
+      <button className="FriendCard__btn" onClick={() => onHandleDelete(id)}>
         X
       </button>
     </div>

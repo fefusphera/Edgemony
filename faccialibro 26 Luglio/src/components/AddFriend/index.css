@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora&display=swap");
+
 .AddFriendDiv {
   margin: 5px;
   display: flex;
@@ -8,4 +10,6 @@
 .AddFriendDiv h1 {
   align-self: center;
   font-size: 1.5rem;
+  color: rgb(205 173 255);
+  font-family: "Bebas Neue", cursive;
 }

@@ -9,15 +9,15 @@ const Navbar = ({ isRenderedList, onDeleteBtn, setSplashscreenVisibility }) => {
   return (
     <div className="Navbar">
       <img
-        src="https://upload.wikimedia.org/wikipedia/it/thumb/0/09/Twitter_bird_logo.png/400px-Twitter_bird_logo.png"
+        src="https://www.pngall.com/wp-content/uploads/10/Aesthetic-Tumblr-PNG-Image.png"
         alt="logo"
       />
-      <h1>Zocial</h1>
+      <h1>Notice Me</h1>
       <Button
         onBtnClick={() => setModalVisibility(true)}
         type="submit"
         textContent="LogOut"
-        color="lightseagreen"
+        color="rgb(205 173 255)"
       />
 
       {isModalVisible && (

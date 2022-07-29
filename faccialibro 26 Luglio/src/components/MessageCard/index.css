@@ -5,11 +5,11 @@
   box-shadow: 0 0 2px rgba(24, 24, 24, 0.45);
 }
 
-.MessageCard__text{
+.MessageCard__text {
   font-size: 1rem;
 }
 
-.MessageCard__info{
+.MessageCard__info {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
@@ -23,8 +23,8 @@
   right: 10px;
   background-color: transparent;
   border: 0;
-  color: lightcoral;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(205 173 255);
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
@@ -36,5 +36,5 @@
 }
 
 .MessageCard__delete:active {
-  color: lightseagreen;
+  color: black;
 }

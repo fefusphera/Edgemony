@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   color: rgb(24, 24, 24);
   display: flex;
@@ -9,10 +15,12 @@
 .App__mainContent {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .App__navbar {
-  align-self: center;
+  /* width: 90%; */
+  /* align-self: center; */
 }
 
 .App__friends {
@@ -24,7 +32,6 @@
   width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 @media (max-width: 767px) {

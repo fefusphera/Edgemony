@@ -42,7 +42,7 @@ const AddFriend = ({ isRenderedList, setRenderedList }) => {
         onChange={(e) => setNewFriendImg(e.target.value)}
         required
       />
-      <Button type="submit" textContent="Invia" color="lightseagreen" />
+      <Button type="submit" textContent="Invia" color="rgb(205 173 255)" />
     </form>
   );
 };
