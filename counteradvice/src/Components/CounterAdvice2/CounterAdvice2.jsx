@@ -58,14 +58,14 @@ const CounterAdvice2 = () => {
       <p> Advice n° {advice2.id}</p>
       <p> {advice2.advice} </p>
       <button
-        // disabled={advice2.id > 4}
+        disabled={advice2.id > 4}
         className="New"
         onClick={() => dispatch({ type: "New" })}
       >
         New
       </button>
       <button
-        // disabled={advice2.id < 1}
+        disabled={advice2.id < 1}
         className="Previous"
         onClick={() => dispatch({ type: "Previous" })}
       >
