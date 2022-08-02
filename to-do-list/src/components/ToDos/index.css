@@ -1,0 +1,9 @@
+.liEl {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.liEl li {
+  margin: 0px;
+}

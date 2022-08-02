@@ -1,0 +1,17 @@
+.ToDoList {
+  /* border: 2px solid red; */
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 20rem;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.ToDoList ul {
+  padding: 0px;
+  list-style: circle;
+  text-align: center;
+  color: #899878;
+}
