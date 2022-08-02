@@ -7,16 +7,16 @@ const FriendList = () => {
   const [friendList, setFriendList] = useState([]);
   useEffect(() => {
     GET("friends").then((data) => setFriendList(data));
-  });
+  }, []);
   return (
     <div className="FriendList">
       {friendList.length ? (
-        friendList.map((friends) => (
+        friendList.map((friend) => (
           <Friend
-            name={friends.name}
-            img={friends.photo}
-            id={friends.id}
-            key={friends.id}
+            name={friend.name}
+            img={friend.photo}
+            id={friend.id}
+            key={friend.id}
           />
         ))
       ) : (
