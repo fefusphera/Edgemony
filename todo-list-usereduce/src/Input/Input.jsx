@@ -6,17 +6,15 @@ const Input = ({ onChange, children }) => {
   };
 
   return (
-    <section className="input">
-      <div className="input__inner">
-        <input
-          name="task"
-          placeholder="type here"
-          onChange={handleChange}
-          type="text"
-        />
-        {children}
-      </div>
-    </section>
+    <div>
+      <input
+        name="task"
+        placeholder="type here"
+        onChange={handleChange}
+        type="text"
+      />
+      {children}
+    </div>
   );
 };
 

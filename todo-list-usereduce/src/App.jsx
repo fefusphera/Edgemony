@@ -60,7 +60,6 @@ function App() {
 
   const handleInputChange = (e) => {
     todo[e.target.name] = e.target.value;
-    console.log(todo.task);
   };
 
   const [state, dispatch] = React.useReducer(reducer, stateInitialValue);
