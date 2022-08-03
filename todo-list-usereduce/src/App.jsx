@@ -68,16 +68,15 @@ function App() {
   return (
     <div className="container">
       <h1>TO DO</h1>
-
       <Input onChange={handleInputChange}>
         <Button onClick={addTodo}>Add</Button>
       </Input>
 
-      <div className="todos">
+      <div className="ToDoList">
         {state.todos.map((todo, index) => {
           let { id } = todo;
           return (
-            <ToDoList todo={todo} key={`todo-${index}`}>
+            <ToDoList todo={todo} key={todo.index}>
               <Button onClick={() => deleteTodos(id)}>Delete</Button>
             </ToDoList>
           );
