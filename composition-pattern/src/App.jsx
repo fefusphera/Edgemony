@@ -6,7 +6,9 @@ import "./App.css";
 
 function App() {
   const pantone = {
-    color: "#212F3D",
+    color1: "#6d6875",
+    color2: "#b5838d",
+    color3: "#e5989b",
   };
 
   return (
