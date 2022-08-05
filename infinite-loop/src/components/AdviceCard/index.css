@@ -1,3 +1,28 @@
+.AdviceDiv {
+  position: relative;
+  background-color: #d0ada7;
+  border-radius: 10px;
+  color: #5d2e46;
+}
+
+.AdviceTitle {
+  padding: 1rem;
+}
+
+.MainText {
+  padding: 40px;
+}
+
 .btnchange {
+  height: 2.5rem;
+  width: 2.5rem;
   padding: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #5d2e46;
+  color: #e8d6cb;
+  border: 0;
+  border-radius: 100%;
 }
