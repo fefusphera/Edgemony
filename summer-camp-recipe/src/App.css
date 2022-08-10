@@ -1,0 +1,85 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Titan+One&display=swap");
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: #fefae0;
+}
+
+.mainTitle {
+  background-color: #542426;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://img5.goodfon.com/original/2560x1600/0/2c/osen-listia-fon-colorful-background-autumn-leaves-osennie-18.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  position: relative;
+}
+
+.mainTitleFirst {
+  /* font-family: "Titan One", cursive; */
+  font-family: "Libre Baskerville", serif;
+  font-size: 3rem;
+  color: #fefae0;
+  text-shadow: 0 0 3px black;
+  margin: 20px;
+}
+
+.mainTitle button {
+  padding: 10px;
+  margin: 20px;
+  /* width: fit-content; */
+  background-color: #fefae066;
+  border-radius: 10px;
+  /* border: none; */
+  /* border-radius: 100%; */
+  border: 1px solid #fefae0c2;
+  color: #472d30;
+  font-size: 1rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mealName {
+  margin: 20px;
+  /* border-bottom: 1px solid #472d30; */
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: "Libre Baskerville", serif;
+  color: #472d30;
+}
+
+.mealPic img {
+  width: 35%;
+  border-radius: 100%;
+  margin: 1.5rem;
+}
+
+.mealRecipe {
+  margin: 20px;
+  /* padding: 3rem; */
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Libre Baskerville", serif;
+  color: #472d30;
+}
+
+.mealRecipe h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  /* margin-bottom: 2rem; */
+}
+
+.recipeText {
+  padding: 3rem;
+}
