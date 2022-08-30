@@ -1,0 +1,32 @@
+.main_content {
+  color: rgb(24, 24, 24);
+  display: flex;
+  font-size: 0.9rem;
+  justify-content: space-around;
+}
+
+.App__friends {
+  color: lightgrey;
+}
+
+.App_messages, .App__friends {
+  padding: 20px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  
+}
+
+@media (max-width: 767px) {
+  .main_content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.search_input {
+  padding: 10px 20px;
+ margin-bottom: 20px; 
+}
