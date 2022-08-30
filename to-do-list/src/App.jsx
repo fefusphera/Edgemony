@@ -11,6 +11,7 @@ function App() {
 
   const onChangeTask = (e) => {
     setTask(e.target.value);
+    console.log(e.target.value);
   };
 
   //handleSubmit dichiarato nel FORM cosa fa?
