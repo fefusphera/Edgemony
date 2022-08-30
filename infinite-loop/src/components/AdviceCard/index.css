@@ -21,8 +21,13 @@
   left: 50%;
   top: 100%;
   transform: translate(-50%, -50%);
+  transition: 0.2s ease-in-out;
   background-color: #5d2e46;
   color: #e8d6cb;
   border: 0;
   border-radius: 100%;
+}
+
+button.btnchange:hover {
+  transform: rotate(180deg) translate(50%, 50%);
 }
