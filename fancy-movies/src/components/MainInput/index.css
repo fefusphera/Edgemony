@@ -1,0 +1,35 @@
+.MainInput {
+  height: 40px;
+  display: flex;
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 170px);
+  /* justify-self: center; */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  transition: all 0.35s;
+}
+
+.MainInput input {
+  background-color: rgba(255, 255, 255, 0.445);
+  padding-left: 14px;
+  width: 240px;
+  border: 0;
+  outline: none;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.MainInput button {
+  width: 60px;
+
+  border: 0;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid lightgrey;
+  cursor: pointer;
+
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
