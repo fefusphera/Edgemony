@@ -1,0 +1,13 @@
+.MainSection {
+  padding: 100px 40px;
+  display: flex;
+  background: lightseagreen;
+
+  height: 100vh;
+}
+
+.cardStylePippo {
+  width: 200px;
+  height: 70px;
+  font-size: 16px;
+}
