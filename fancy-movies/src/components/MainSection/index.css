@@ -1,13 +1,28 @@
 .MainSection {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
   padding: 100px 40px;
   display: flex;
-  background: lightseagreen;
+  flex-direction: row;
+  height: 700px;
+  width: 100%;
+  color: white;
 
-  height: 100vh;
+  /* border: 3px solid purple; */
 }
 
-.cardStylePippo {
-  width: 200px;
-  height: 70px;
-  font-size: 16px;
+.MainSectionPrefe {
+  margin: 1rem;
+}
+
+.MainSection h3 {
+  font-size: 2rem;
+}
+
+.MainSectionScroll {
+  margin: 1rem;
+  /* border: 3px solid peru; */
+  flex-direction: row;
+  flex-wrap: nowrap;
 }

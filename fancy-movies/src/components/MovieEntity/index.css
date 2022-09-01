@@ -1,4 +1,30 @@
+body {
+  background-color: black;
+}
+
 .MovieEntity {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+}
+
+.MovieEntity__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 22%;
+  padding: 20px;
+}
+
+.MovieEntity__book {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 22%;
+}
+
+/* .MovieEntity {
   display: flex;
   background-color: rgb(26, 0, 45);
   color: white;
@@ -80,4 +106,4 @@
 .MovieEntity__book--btn:hover {
   background-color: black;
   color: white;
-}
+} */

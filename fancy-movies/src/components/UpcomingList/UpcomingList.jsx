@@ -4,13 +4,8 @@ import "./index.css";
 const UpcomingList = ({ cardData, nCards }) => {
   return (
     <div className="UpcomingList">
-      <h3>Upcoming Movies:</h3>
-      {[...Array(nCards)].map((i, ii) => (
-        <MainCard
-          cardData={cardData}
-          cardStyle={{ width: "200px", height: "70px", fontSize: "16px" }}
-          key={ii}
-        />
+      {cardData.map((i, ii) => (
+        <MainCard cardData={i} key={ii} />
       ))}
     </div>
   );
