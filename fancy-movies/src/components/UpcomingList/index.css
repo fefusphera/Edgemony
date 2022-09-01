@@ -4,6 +4,6 @@
   /* justify-content: center; */
   gap: 20px;
   width: 80vh;
-  /* height: 200px; */
+  height: 200px;
   overflow-x: scroll;
 }

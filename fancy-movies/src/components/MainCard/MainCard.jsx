@@ -1,6 +1,6 @@
 import "./index.css";
 
-const MainCard = ({ isMain, cardData, cardStyle = {} }) => {
+const MainCard = ({ isMain, cardData }) => {
   const { title, vote_average, poster_path } = cardData;
 
   return (
@@ -10,10 +10,10 @@ const MainCard = ({ isMain, cardData, cardStyle = {} }) => {
         src={`https://image.tmdb.org/t/p/w342${poster_path}`}
         alt={title}
       />
-      <div className="MainCard__text">
-        {/* <h3>{title}</h3> */}
-        {/* <p>{vote_average}</p> */}
-      </div>
+      {/* <div className="MainCard__text">
+        <h3>{title}</h3>
+        <p>{vote_average}</p>
+      </div> */}
     </div>
   );
 };
