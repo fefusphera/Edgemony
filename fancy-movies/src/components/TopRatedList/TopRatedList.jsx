@@ -1,11 +1,11 @@
 import MainCard from "../MainCard";
 import "./index.css";
 
-const TopRatedList = ({ cardData, nCards }) => {
+const TopRatedList = ({ cardData = { title: "", poster_path: "" } }) => {
   return (
     <div className="TopRatedList">
-      {cardData.map((i, ii) => (
-        <MainCard cardData={i} key={ii} />
+      {cardData.map((el, index) => (
+        <MainCard cardData={el} key={index} />
       ))}
     </div>
   );

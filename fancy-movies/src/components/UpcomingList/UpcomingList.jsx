@@ -1,7 +1,7 @@
 import MainCard from "../MainCard";
 import "./index.css";
 
-const UpcomingList = ({ cardData, nCards }) => {
+const UpcomingList = ({ cardData = { title: "", poster_path: "" } }) => {
   return (
     <div className="UpcomingList">
       {cardData.map((i, ii) => (

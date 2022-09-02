@@ -1,0 +1,25 @@
+.MainModalOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex: 0 0 auto;
+}
+
+.MainModal {
+  background-color: rgb(96, 96, 96);
+  width: 50%;
+  height: 50%;
+}
+
+.ModalMainCard--img {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 70%;
+}
