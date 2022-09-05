@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MainModal from "../MainModal";
-import "./index.css";
+import "./index.scss";
 
 const MainCard = ({ isMain, cardData = { title: "", poster_path: "" } }) => {
   const { title, poster_path } = cardData;

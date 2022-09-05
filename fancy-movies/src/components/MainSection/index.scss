@@ -1,7 +1,9 @@
+@import "../../style/variables";
+
 .MainSection {
   display: flex;
   justify-content: center;
-  background-color: rgb(0, 0, 0);
+  background-color: $primary-color;
   padding: 100px 40px;
   display: flex;
   flex-direction: row;

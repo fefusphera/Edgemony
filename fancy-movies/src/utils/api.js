@@ -7,3 +7,4 @@ const GET = async (type, specific, ext = "") => {
 };
 
 export { GET };
+

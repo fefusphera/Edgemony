@@ -3,7 +3,7 @@ import MainCard from "../MainCard";
 import TopRatedList from "../TopRatedList";
 import UpcomingList from "../UpcomingList";
 import { GET } from "../../utils/api";
-import "./index.css";
+import "./index.scss";
 
 const MainSection = () => {
   const [movieLists, setMovieLists] = useState({

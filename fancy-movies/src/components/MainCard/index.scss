@@ -1,0 +1,32 @@
+.MainCard {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  border: 1px solid white;
+  /* border: 2px solid red; */
+}
+
+.MiniCard {
+  /* border: 2px solid blue; */
+  flex: 0 0 auto;
+  color: white;
+}
+.MiniCard img {
+  width: 200px;
+  height: 90px;
+  border: 1px solid white;
+}
+
+.MiniCard h3 {
+  font-size: 0.9rem;
+}
+
+.MainCard--img {
+  /* border: 2px solid green; */
+  object-fit: cover;
+}
+
+.MainCard__text {
+  font-size: 0.5rem;
+  color: rgb(255, 255, 255);
+}
