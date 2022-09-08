@@ -43,19 +43,23 @@ const MovieHome = ({
             Search
           </button>
         </form>
-
-        {searched.length > 0 && (
-          <div className="MainMovieCard">
-            <div className="MainMovieCard__info">
-              <h1>{searched[0].title}</h1>
-              <p>{searched[0].overview}</p>
-            </div>
-            <div className="MainMovieCard__img">
-              <img src={API_IMG + searched[0].poster_path} alt={title} />
-            </div>
-          </div>
-        )}
       </div>
+
+      {searched.length > 0 && (
+        <div className="MainMovieCard">
+          <div className="MainMovieCard__info">
+            <h1 className="MainMovieCard__title">{searched[0].title}</h1>
+            <p className="MainMovieCard__description">{searched[0].overview}</p>
+          </div>
+          <div className="MainMovieCardImageDiv">
+            <img
+              className="MainMovieCard__img"
+              src={API_IMG + searched[0].poster_path}
+              alt={title}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

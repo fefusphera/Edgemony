@@ -31,8 +31,8 @@ function App() {
 
   return (
     <div className="App">
-      <Popular cardData={movies[0]} />
       <MovieHome setSearchValue={setSearchValue} cardData={movies[0]} />
+      <Popular cardData={movies[0]} />
 
       {topRated ? (
         topRated.map((topRated) => (

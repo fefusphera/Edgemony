@@ -1,0 +1,18 @@
+@import "../../style/variables";
+@import "../../style/mixins";
+
+.Popular {
+  @include display();
+  background-color: $soft-transparency;
+  .MainPopular__Info {
+    @include display(flex, column, center, center);
+    margin-left: 30px;
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+  }
+  .MainPopular__Img {
+    border-radius: 5px;
+    width: 300px;
+  }
+}

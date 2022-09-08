@@ -10,11 +10,11 @@ const Popular = ({
 
   return (
     <div className="Popular">
-      <div className="MainPopularInfo">
+      <div className="MainPopular__Info">
         <h1>{title}</h1>
         <p>{overview}</p>
       </div>
-      <div className="MainPopularImg">
+      <div className="MainPopular__Img">
         <img src={API_IMG + poster_path} alt={title} />
       </div>
     </div>
