@@ -4,7 +4,7 @@ import Popular from "./components/Popular";
 import MovieHome from "./components/MovieHome";
 import TopRated from "./components/TopRated";
 import Upcoming from "./components/Upcoming";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const API_URL =
@@ -31,17 +31,8 @@ function App() {
 
   return (
     <div className="App">
-      <button
-        onClick={(e) => {
-          console.log("Bottone Search Value in App>>>>", searchValue);
-        }}
-      >
-        CIAO AMIO
-      </button>
-
-      <MovieHome setSearchValue={setSearchValue} cardData={movies[0]} />
-
       <Popular cardData={movies[0]} />
+      <MovieHome setSearchValue={setSearchValue} cardData={movies[0]} />
 
       {topRated ? (
         topRated.map((topRated) => (

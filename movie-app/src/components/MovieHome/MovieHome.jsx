@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/api";
-
 import "./index.scss";
 
 const MovieHome = ({
@@ -10,7 +9,7 @@ const MovieHome = ({
   cardData = { title: "", poster_path: "", overview: "" },
 }) => {
   const { title, poster_path, overview } = cardData;
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("coco");
   const [searched, setSearched] = useState([]);
   const API_IMG = "https://image.tmdb.org/t/p/w500";
 
@@ -40,7 +39,9 @@ const MovieHome = ({
       <div className="searchMovieForm">
         <form className="MainInputForm" onSubmit={onHandleSubmit}>
           <input type="text" onChange={onHandleChange} />
-          <button type="submit">Search</button>
+          <button className="FormBtn" type="submit">
+            Search
+          </button>
         </form>
 
         {searched.length > 0 && (

@@ -1,0 +1,7 @@
+@import "./style/mixins";
+@import "./style/variables";
+
+.App {
+  text-align: center;
+  @include display();
+}

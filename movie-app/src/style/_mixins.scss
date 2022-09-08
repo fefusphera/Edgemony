@@ -20,13 +20,14 @@
 }
 
 @mixin display(
-  $direction: row,
-  $justify: flex-start,
+  $display: flex,
+  $direction: column,
+  $justify: center,
   $align: stretch,
   $wrap: nowrap,
   $gap: 0px
 ) {
-  display: flex;
+  display: $display;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
