@@ -1,38 +1,39 @@
 import { useState, useEffect } from "react";
+import { GET } from "../../utils/api";
+
 import "./index.scss";
 
 const MovieHome = ({
-  setInputPippo,
+  query,
+  ext,
+  setSearchValue,
   cardData = { title: "", poster_path: "", overview: "" },
 }) => {
   const { title, poster_path, overview } = cardData;
   const [inputValue, setInputValue] = useState("");
-  const [searchedMovie, setSearchedMovie] = useState([]);
+  const [searched, setSearched] = useState([]);
+  const API_IMG = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
-    fetch(API_SEARCH + inputValue)
-      .then((res) => res.json())
-      .then((data) => {
-        setSearchedMovie(data.results);
+    if (inputValue !== "") {
+      GET(inputValue, "&language=en-US&page=1").then((data) => {
+        console.log(data);
+        setSearched(data.results);
       });
-  }, []);
-
-  const API_IMG = "https://image.tmdb.org/t/p/w500";
-  const API_SEARCH =
-    "https://api.themoviedb.org/3/search/movie?api_key=a3e69b3b929b911d21793d43d1d96b7c&query=";
+    }
+  }, [inputValue]);
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    setInputPippo(inputValue);
-    setInputValue("");
+    setInputValue(inputValue);
+    setSearchValue(inputValue);
+    // console.log("Submit MovieHome>>>", inputValue);
   };
   const onHandleChange = (e) => {
     setInputValue(e.target.value);
-    console.log(inputValue);
   };
 
-  // console.log(API_SEARCH + inputValue);
-  console.log(searchedMovie);
+  console.log("SEARCHED>>>>", searched);
 
   return (
     <div className="MainMovieHome">
@@ -42,15 +43,17 @@ const MovieHome = ({
           <button type="submit">Search</button>
         </form>
 
-        <div className="MainMovieCard">
-          <div className="MainMovieCard__info">
-            <h1>{title}</h1>
-            <p>{overview}</p>
+        {searched.length > 0 && (
+          <div className="MainMovieCard">
+            <div className="MainMovieCard__info">
+              <h1>{searched[0].title}</h1>
+              <p>{searched[0].overview}</p>
+            </div>
+            <div className="MainMovieCard__img">
+              <img src={API_IMG + searched[0].poster_path} alt={title} />
+            </div>
           </div>
-          <div className="MainMovieCard__img">
-            <img src={API_IMG + poster_path} alt={title} />
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

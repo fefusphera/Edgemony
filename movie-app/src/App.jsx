@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { GET2 } from "./utils/api.js";
 import Popular from "./components/Popular";
 import MovieHome from "./components/MovieHome";
 import TopRated from "./components/TopRated";
@@ -7,14 +7,12 @@ import Upcoming from "./components/Upcoming";
 import "./App.css";
 
 function App() {
-  const API_SEARCH =
-    "https://api.themoviedb.org/3/search/movie?api_key=a3e69b3b929b911d21793d43d1d96b7c&query=";
   const API_URL =
     "https://api.themoviedb.org/3/movie/popular?api_key=a3e69b3b929b911d21793d43d1d96b7c";
 
   const [movies, setMovies] = useState([]);
+  const [topRated, setTopRated] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [searchedMovie, setSearchedMovie] = useState([]);
 
   useEffect(() => {
     fetch(API_URL)
@@ -25,32 +23,34 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch(API_SEARCH + searchValue)
-      .then((res) => res.json())
-      .then((data) => {
-        setSearchedMovie(data.results);
-      });
+    GET2("movie", "top_rated", "&language=en-US&page=1").then((data) =>
+      setTopRated(data.results)
+    );
   }, []);
-
-  console.log(API_SEARCH + searchValue);
-  console.log(searchedMovie);
+  console.log("TOP RATED", topRated);
 
   return (
     <div className="App">
       <button
         onClick={(e) => {
-          console.log("INPUT VALUE>>>>", searchValue);
+          console.log("Bottone Search Value in App>>>>", searchValue);
         }}
       >
         CIAO AMIO
       </button>
 
-      <MovieHome setInputPippo={setSearchValue} />
-      {/* {movies.map((moviePippo) => (
-        <Popular key={moviePippo.id} {...moviePippo} />
-      ))} */}
+      <MovieHome setSearchValue={setSearchValue} cardData={movies[0]} />
+
       <Popular cardData={movies[0]} />
-      <TopRated />
+
+      {topRated ? (
+        topRated.map((topRated) => (
+          <TopRated key={topRated.id} cardData={topRated} />
+        ))
+      ) : (
+        <h1>ERROR</h1>
+      )}
+
       <Upcoming />
     </div>
   );

@@ -1,9 +1,37 @@
 const BASE_URL = "https://api.themoviedb.org/3/";
 const API_KEY = "?api_key=a3e69b3b929b911d21793d43d1d96b7c";
 
-const GET = async (type, specific, ext = "") => {
+const API_SEARCH =
+  "https://api.themoviedb.org/3/search/movie?api_key=a3e69b3b929b911d21793d43d1d96b7c&query=";
+
+const GET = async (query, ext = "") => {
+  const res = await fetch(API_SEARCH + query + ext);
+  return await res.json();
+};
+
+const GET2 = async (type, specific, ext = "") => {
   const res = await fetch(BASE_URL + type + "/" + specific + API_KEY + ext);
   return await res.json();
 };
 
-export { GET };
+export { GET, GET2 };
+
+//https://api.themoviedb.org/3/movie/upcoming?api_key=a3e69b3b929b911d21793d43d1d96b7c&language=en-US&page=1
+
+{
+  /* {movies.map((moviePippo) => (
+        <Popular key={moviePippo.id} {...moviePippo} />
+      ))} */
+}
+
+// searched.results.map((movie) => (
+//   <div className="MainMovieCard">
+//     <div className="MainMovieCard__info">
+//       <h1>{movie.title}</h1>
+//       <p>{movie.overview}</p>
+//     </div>
+//     <div className="MainMovieCard__img">
+//       <img src={API_IMG + movie.poster_path} alt={title} />
+//     </div>
+//   </div>
+// ));
