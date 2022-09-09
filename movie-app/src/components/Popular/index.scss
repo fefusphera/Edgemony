@@ -1,18 +1,47 @@
 @import "../../style/variables";
 @import "../../style/mixins";
 
-.Popular {
-  @include display();
-  background-color: $soft-transparency;
-  .MainPopular__Info {
-    @include display(flex, column, center, center);
-    margin-left: 30px;
-    width: 500px;
-    height: 400px;
-    padding: 30px;
+.MainPopular {
+  margin-top: 5rem;
+  @include display(flex, row);
+  justify-content: space-around;
+  border: 2px solid red;
+  align-items: center;
+  width: 100vw;
+  align-self: center;
+
+  .MainPopularTITLE {
+    border: 2px solid green;
   }
-  .MainPopular__Img {
-    border-radius: 5px;
-    width: 300px;
+
+  .MainPopularCard {
+    border: 2px solid blue;
+    @include display(flex, row-reverse, center, center);
+    background-color: $soft-transparency;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    width: 50%;
+
+    &__info {
+      @include display(flex, column, center, center);
+      margin-left: 30px;
+      width: 500px;
+      height: 400px;
+      padding: 30px;
+      // border: 2px solid violet;
+    }
+
+    &__title {
+      margin-top: 0px;
+      color: #c57f30;
+      font-weight: bold;
+      text-shadow: 0 0 1.5px black;
+    }
+
+    .MainPopular__Img {
+      border-radius: 5px;
+      width: 300px;
+    }
   }
 }

@@ -2,6 +2,7 @@
 @import "../../style/mixins.scss";
 
 .MainMovieHome {
+  border: 2px solid green;
   @include display();
 
   align-items: center;

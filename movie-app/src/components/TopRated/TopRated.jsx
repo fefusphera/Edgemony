@@ -8,7 +8,7 @@ const TopRated = ({ cardData }) => {
         <h1>{title}</h1>
         <p>{overview}</p>
       </div>
-      <div className="MainPopularImg">
+      <div className="MainTopRatedImg">
         <img src={API_IMG + poster_path} alt={title} />
       </div>
     </div>

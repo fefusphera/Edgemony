@@ -11,6 +11,7 @@ function App() {
     "https://api.themoviedb.org/3/movie/popular?api_key=a3e69b3b929b911d21793d43d1d96b7c";
 
   const [movies, setMovies] = useState([]);
+  const [popular, setPopular] = useState([]);
   const [topRated, setTopRated] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -21,6 +22,12 @@ function App() {
       .then((data) => {
         setMovies(data.results);
       });
+  }, []);
+
+  useEffect(() => {
+    GET2("movie", "popular", "&language=en-US&page=1").then((data) =>
+      setPopular(data.results)
+    );
   }, []);
 
   useEffect(() => {
@@ -37,7 +44,14 @@ function App() {
   return (
     <div className="App">
       <MovieHome setSearchValue={setSearchValue} cardData={movies[0]} />
-      <Popular cardData={movies[0]} />
+
+      {popular ? (
+        popular.map((popular) => (
+          <Popular key={popular.id} cardData={popular} />
+        ))
+      ) : (
+        <h1>Loaging...</h1>
+      )}
 
       {topRated ? (
         topRated.map((topRated) => (
