@@ -27,7 +27,7 @@ function App() {
       setTopRated(data.results)
     );
   }, []);
-  console.log("TOP RATED", topRated);
+  // console.log("TOP RATED", topRated);
 
   return (
     <div className="App">

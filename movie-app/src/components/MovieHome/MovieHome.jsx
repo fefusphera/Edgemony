@@ -11,6 +11,7 @@ const MovieHome = ({
   const { title, poster_path, overview } = cardData;
   const [inputValue, setInputValue] = useState("coco");
   const [searched, setSearched] = useState([]);
+
   const API_IMG = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
@@ -24,21 +25,17 @@ const MovieHome = ({
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    setInputValue(inputValue);
+    setInputValue(e.target[0].value);
     setSearchValue(inputValue);
-    // console.log("Submit MovieHome>>>", inputValue);
-  };
-  const onHandleChange = (e) => {
-    setInputValue(e.target.value);
   };
 
-  console.log("SEARCHED>>>>", searched);
+  console.log("SEARCHED>>>>", searched[0]);
 
   return (
     <div className="MainMovieHome">
       <div className="searchMovieForm">
         <form className="MainInputForm" onSubmit={onHandleSubmit}>
-          <input type="text" onChange={onHandleChange} />
+          <input type="text" />
           <button className="FormBtn" type="submit">
             Search
           </button>
