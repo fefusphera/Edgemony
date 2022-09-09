@@ -12,6 +12,7 @@ function App() {
 
   const [movies, setMovies] = useState([]);
   const [topRated, setTopRated] = useState([]);
+  const [upcoming, setUpcoming] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
@@ -27,7 +28,11 @@ function App() {
       setTopRated(data.results)
     );
   }, []);
-  // console.log("TOP RATED", topRated);
+  useEffect(() => {
+    GET2("movie", "upcoming", "&language=en-US&page=1").then((data) =>
+      setUpcoming(data.results)
+    );
+  }, []);
 
   return (
     <div className="App">
@@ -39,10 +44,16 @@ function App() {
           <TopRated key={topRated.id} cardData={topRated} />
         ))
       ) : (
-        <h1>ERROR</h1>
+        <h1>Loagind...</h1>
       )}
 
-      <Upcoming />
+      {upcoming ? (
+        upcoming.map((upcoming) => (
+          <Upcoming key={upcoming.id} cardData={upcoming} />
+        ))
+      ) : (
+        <h1>Loading...</h1>
+      )}
     </div>
   );
 }

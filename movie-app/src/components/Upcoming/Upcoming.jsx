@@ -1,17 +1,18 @@
-import { GET2 } from "../../utils/api.js";
-import { useEffect, useState } from "react";
-
-//https://api.themoviedb.org/3/movie/upcoming?api_key=a3e69b3b929b911d21793d43d1d96b7c&language=en-US&page=1
-
-const Upcoming = () => {
-  // const [upcoming, setUpcoming] = useState([])
-
-  useEffect(() => {});
+const Upcoming = ({ cardData }) => {
+  const { title, poster_path, overview } = cardData;
+  const API_IMG = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div>
-      <h1>Upcoming</h1>
+    <div className="Upcoming">
+      <div className="MainUpcomingInfo">
+        <h1>{title}</h1>
+        <p>{overview}</p>
+      </div>
+      <div className="MainUpcomingmg">
+        <img src={API_IMG + poster_path} alt={title} />
+      </div>
     </div>
   );
 };
+
 export default Upcoming;
