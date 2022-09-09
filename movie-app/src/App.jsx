@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { GET2 } from "./utils/api.js";
+import Navbar from "./components/Navbar/";
 import Popular from "./components/Popular";
 import MovieHome from "./components/MovieHome";
 import TopRated from "./components/TopRated";
@@ -43,31 +44,38 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
+
       <MovieHome setSearchValue={setSearchValue} cardData={movies[0]} />
+      <div className="PopularList">
+        {popular ? (
+          popular.map((popular) => (
+            <Popular key={popular.id} cardData={popular} />
+          ))
+        ) : (
+          <h1>Loading...</h1>
+        )}
+      </div>
 
-      {popular ? (
-        popular.map((popular) => (
-          <Popular key={popular.id} cardData={popular} />
-        ))
-      ) : (
-        <h1>Loaging...</h1>
-      )}
+      <div className="TopRatedList">
+        {topRated ? (
+          topRated.map((topRated) => (
+            <TopRated key={topRated.id} cardData={topRated} />
+          ))
+        ) : (
+          <h1>Loagind...</h1>
+        )}
+      </div>
 
-      {topRated ? (
-        topRated.map((topRated) => (
-          <TopRated key={topRated.id} cardData={topRated} />
-        ))
-      ) : (
-        <h1>Loagind...</h1>
-      )}
-
-      {upcoming ? (
-        upcoming.map((upcoming) => (
-          <Upcoming key={upcoming.id} cardData={upcoming} />
-        ))
-      ) : (
-        <h1>Loading...</h1>
-      )}
+      <div className="UpcomingList">
+        {upcoming ? (
+          upcoming.map((upcoming) => (
+            <Upcoming key={upcoming.id} cardData={upcoming} />
+          ))
+        ) : (
+          <h1>Loading...</h1>
+        )}
+      </div>
     </div>
   );
 }

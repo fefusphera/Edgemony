@@ -4,4 +4,10 @@
 .App {
   text-align: center;
   @include display();
+
+  .PopularList {
+    @include display(flex, row, center, center, nowrap, 20px);
+    width: 100vw;
+    overflow-x: scroll;
+  }
 }
