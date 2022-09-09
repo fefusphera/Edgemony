@@ -1,5 +1,5 @@
 import MainCard from "../MainCard";
-import "./index.css";
+import "./index.scss";
 
 const UpcomingList = ({ cardData = { title: "", poster_path: "" } }) => {
   return (
