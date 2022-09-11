@@ -1,15 +1,23 @@
+import "./index.scss";
+
 const TopRated = ({ cardData }) => {
   const { title, poster_path, overview } = cardData;
   const API_IMG = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div className="TopRated">
-      <div className="MainTopRatedInfo">
-        <h1>{title}</h1>
-        <p>{overview}</p>
-      </div>
-      <div className="MainTopRatedImg">
-        <img src={API_IMG + poster_path} alt={title} />
+    <div className="TopRated" id="top-rated">
+      <div className="TopRatedCard">
+        <h1 className="TopRated__Title">{title}</h1>
+        <div className="TopRated__Info">
+          {/* <p>{overview}</p> */}
+          <div className="TopRated__Card">
+            <img
+              className="TopRated__Img"
+              src={API_IMG + poster_path}
+              alt={title}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

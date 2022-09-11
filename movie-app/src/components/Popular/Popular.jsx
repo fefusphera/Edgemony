@@ -5,10 +5,10 @@ const Popular = ({ cardData }) => {
   const API_IMG = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div className="Popular">
+    <div className="Popular" id="most-popular">
       <div className="MainPopularCard">
+        <h1 className="MainPopularInfo__title">{title}</h1>
         <div className="MainPopularInfo">
-          <h1 className="MainPopularInfo__title">{title}</h1>
           {/* <p className="MainPopularInfo__description">{overview}</p> */}
           <div className="MainPopularImgCard">
             <img

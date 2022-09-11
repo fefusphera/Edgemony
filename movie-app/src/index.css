@@ -1,5 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+* {
+  font-family: "PT Serif", serif;
+}
+
 body {
-  background: #1e2224;
+  background: #000000;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(39, 40, 41) 100%
+  );
 
   margin: 0;
   padding: 0;

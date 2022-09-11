@@ -44,9 +44,12 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <MovieHome setSearchValue={setSearchValue} cardData={movies[0]} />
+      <div className="PopularList__Title">
+        <h1>Popular:</h1>
+      </div>
       <div className="PopularList">
         {popular ? (
           popular.map((popular) => (
@@ -55,6 +58,9 @@ function App() {
         ) : (
           <h1>Loading...</h1>
         )}
+      </div>
+      <div className="TopRatedList__Title">
+        <h1>Top Rated:</h1>
       </div>
 
       <div className="TopRatedList">
@@ -65,6 +71,9 @@ function App() {
         ) : (
           <h1>Loagind...</h1>
         )}
+      </div>
+      <div className="UpcomingList__Title">
+        <h1>Upcoming:</h1>
       </div>
 
       <div className="UpcomingList">

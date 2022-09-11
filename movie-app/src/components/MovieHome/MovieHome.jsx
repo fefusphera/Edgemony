@@ -32,7 +32,7 @@ const MovieHome = ({
   console.log("SEARCHED>>>>", searched[0]);
 
   return (
-    <div className="MainMovieHome">
+    <div className="MainMovieHome" id="search">
       <div className="searchMovieForm">
         <form className="MainInputForm" onSubmit={onHandleSubmit}>
           <input type="text" />

@@ -2,7 +2,7 @@
 @import "../../style/mixins.scss";
 
 .MainMovieHome {
-  border: 2px solid green;
+  // border: 2px solid green;
   @include display();
 
   align-items: center;
@@ -23,6 +23,8 @@
         border: none;
         width: 4rem;
         border-radius: 5px;
+        background-color: $secondary-color;
+        font-weight: bold;
       }
     }
   }
@@ -47,12 +49,14 @@
 
     &__title {
       margin-top: 0px;
-      color: #c57f30;
+      color: $secondary-color;
       font-weight: bold;
+      font-size: 50px;
       text-shadow: 0 0 1.5px black;
     }
     .MainMovieCard__img {
       border-radius: 5px;
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.354);
       width: 300px;
     }
   }
