@@ -1,0 +1,11 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.MainCatalog {
+  width: 100vw;
+  height: 100vh;
+  .Title {
+    margin: 0;
+    font-size: 40px;
+  }
+}
