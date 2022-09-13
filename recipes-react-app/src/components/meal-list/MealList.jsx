@@ -5,7 +5,7 @@ const MealList = (props) => {
   const { meals = [], categoryName = "" } = props;
 
   return (
-    <div className="MealList">
+    <div className={styles.MealList}>
       <ul>
         {meals.map((meal) => (
           <MealListItem

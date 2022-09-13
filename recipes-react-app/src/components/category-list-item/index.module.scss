@@ -3,14 +3,14 @@
 
 .CategoryListItem {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   box-sizing: border-box;
   //   border: 2px solid red;
   @include display();
   max-width: 300px;
   .thumbnail {
     // border: 2px solid blue;
-    max-width: 200px;
+    max-width: 150px;
   }
   .link {
     text-decoration: none;
