@@ -12,11 +12,12 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        {/* la navbar va messa fuori dalle routes per rimanere in ogni pagina */}
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalogo" element={<CatalogPage />} />
-          <Route path="*" element={<ErrorPage name="prova" status={404} />} />
+          <Route path="*" element={<ErrorPage status={404} />} />
         </Routes>
       </BrowserRouter>
     </div>

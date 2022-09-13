@@ -9,8 +9,6 @@ Creare una <Navbar /> visibile su tutte le pagine;
 
 --------Documentazione:
 
-Sintassi:
-
  <BrowserRouter>
     {/* The rest of your app goes here */}
   </BrowserRouter>,
@@ -21,16 +19,46 @@ IN APP ---> <route> <-----
 
 ---
 
+Link con React Native Version:
+
 <nav>
     <Link to="/about">About</Link>
 </nav>
 
-//
+---
+
+Link con MAP e Key:
 
 <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            <Link to={user.id}>{user.name}</Link>
-          </li>
+    {users.map((user) => (
+      <li key={user.id}>
+          <Link to={user.id}>{user.name}</Link>
+      </li>
         ))}
       </ul>
+
+----ESERCIZIO
+
+scrivere il nostro custom hook useFetch che gestisca {loading, data, error}
+pagina home: mostrare lista categorie
+pagina categoria: mostrare lista ricette di categoria
+Sviluppare un po' di UI che sia più carina della lezione
+
+----Documentazione:
+
+{USE PARAMS} -cos'è e che mi rappresenta?
+
+The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
+
+It means whatever you set up in useParams(ex: title), your params have to match with the <Route path='/path/:title'> .
+
+NEL PADRE (nel nostro caso APP) abbiamo:
+<Route path="/catalogo/:categoryName" element={<Category />} />
+quel {/:categoryName} è il nostro UseParams che ci andiamo a richiamare nella pagina Category, così:
+
+            const params = useParams();
+            const {categoryName} = params;
+
+This /:name can be anything, as long as it matches with the parameters/keys of your data. This is also the key when we need to use useParams later on.
+
+First off, we need to make sure the { name } matches with our /explore/:name parameter. Basically, you can name the parameter anything you want, but you would want to match with one of the key in your list so there’s no confusion.
