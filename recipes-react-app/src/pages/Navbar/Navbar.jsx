@@ -9,7 +9,7 @@ const Navbar = () => {
         <li>Catalog</li>
       </ul> */}
       <Link to="/catalogo" className={styles.li}>
-        Catalogo
+        Catalog
       </Link>
       <Link to="/" className={styles.li}>
         Home

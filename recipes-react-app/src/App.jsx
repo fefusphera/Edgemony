@@ -5,6 +5,7 @@ import Navbar from "./pages/Navbar";
 import CatalogPage from "./pages/CatalogPage";
 import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
+import MealsPage from "./pages/MealsPage";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalogo" element={<CatalogPage />} />
+          <Route path="/catalogo/:categoryName" element={<MealsPage />} />
           <Route path="*" element={<ErrorPage status={404} />} />
         </Routes>
       </BrowserRouter>
