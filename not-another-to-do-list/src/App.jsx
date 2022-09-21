@@ -47,12 +47,12 @@ function App() {
 
   return (
     <div className="App" style={isDarkMode ? theme.darkMode : theme.lightMode}>
+      <h1>COUNTER</h1>
+      <p>{state.count}</p>
+      <button onClick={() => dispatch({ type: "DECREMENT" })}>-</button>
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>
+      <button onClick={() => dispatch({ type: "RESET" })}>RESET</button>
       <PippoContext.Provider value={darkModeStuff}>
-        <h1>COUNTER</h1>
-        <p>{state.count}</p>
-        <button onClick={() => dispatch({ type: "DECREMENT" })}>-</button>
-        <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>
-        <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
         <Lightbulb />
       </PippoContext.Provider>
     </div>

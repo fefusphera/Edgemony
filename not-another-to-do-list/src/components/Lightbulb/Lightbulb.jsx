@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import PippoContext from "../../App";
+import { PippoContext } from "../../App";
 import "./index.css";
 // import styles from "./index.module.scss";
 
@@ -7,8 +7,10 @@ const Lightbulb = () => {
   const theme = useContext(PippoContext);
   const onHandleClick = () => theme.setDarkMode((prev) => !prev);
   //   const onHandleClick = () => theme.setDarkMode(true);
-
-  console.log("IN LIGHTBULB", theme);
+  //   const onHandleClick = () => {
+  //     console.log(theme);
+  //   };
+  //   console.log("IN LIGHTBULB", theme);
 
   return (
     <div>
