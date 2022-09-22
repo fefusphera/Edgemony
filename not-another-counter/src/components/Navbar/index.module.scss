@@ -1,0 +1,39 @@
+.Navbar {
+  // border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+
+  .mainNav {
+    // border: 2px solid pink;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .mainNavImg {
+    // border: 2px solid violet;
+    border-radius: 15px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+  }
+  .Title {
+    // border: 2px solid green;
+    font-size: 30px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    // border: 2px solid red;
+    width: 100px;
+    align-self: flex-start;
+    padding: 20px;
+  }
+  .input {
+    height: 20px;
+  }
+  .Button {
+    height: 20px;
+  }
+}

@@ -8,6 +8,10 @@ export const initState = {
   user: {
     userName: "",
   },
+
+  darkmode: {
+    value: false,
+  },
 };
 
 function countReducer(state = {}, action) {
@@ -30,7 +34,21 @@ function userReducer(state = {}, action) {
   }
 }
 
-const rootReducer = combineReducers({ count: countReducer, user: userReducer });
+function darkModeReducer(state = {}, action) {
+  switch (action.type) {
+    case "SET_DARK_MODE":
+      // console.log("ciao");
+      return { ...state, value: !state.value };
+    default:
+      return state;
+  }
+}
+
+const rootReducer = combineReducers({
+  count: countReducer,
+  user: userReducer,
+  darkmode: darkModeReducer,
+});
 const store = createStore(rootReducer, initState);
 
 export default store;

@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.lightmode {
+  /* border: 2px solid red; */
+  background: #fff;
+  color: #1b1b1b;
+  width: 100vw;
+  height: 100vh;
+}
+
+.darkmode {
+  background: #1b1b1b;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
