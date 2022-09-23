@@ -1,5 +1,5 @@
 import "./App.css";
-
+import Snowfall from "react-snowfall";
 import { useSelector } from "react-redux";
 import Counter from "./components/Counter";
 import Navbar from "./components/Navbar/";
@@ -8,14 +8,21 @@ import Navbar from "./components/Navbar/";
 
 function App() {
   const isDarkMode = useSelector((state) => state.darkmode.value);
-  // const dispatch = useDispatch();
-
-  // console.log(isDarkMode);
 
   return (
     <div className={isDarkMode ? "darkmode" : "lightmode"}>
       <Navbar />
       <Counter />
+
+      {isDarkMode === true && (
+        <Snowfall
+          style={{
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+          }}
+        />
+      )}
     </div>
   );
 }
